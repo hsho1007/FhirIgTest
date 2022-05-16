@@ -431,7 +431,8 @@
 					"reference": "CodeSystem/loinc",
 					"display": "Logical Observation Identifiers Names and Codes"
 				},
-				"name": "Logical Observation Identifiers Names and Codes"
+				"name": "Logical Observation Identifiers Names and Codes",
+				"description": "Logical Observation Identifiers Names and Codes"
 			},
 			{
 				"exampleBoolean": false,
