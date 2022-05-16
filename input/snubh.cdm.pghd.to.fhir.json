@@ -62,7 +62,8 @@
 					"reference": "StructureDefinition/pghd-cdm-visittype",
 					"display": "PGHD CDM VisitType Extension"
 				},
-				"name": "PGHD CDM VisitType Extension"
+				"name": "PGHD CDM VisitType Extension",
+				"description": "Definitions for the PGHD CDM VisitType Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -142,7 +143,8 @@
 					"reference": "ValueSet/pghd-cdm-actencountercode",
 					"display": "PGHD CDM ActEncounterCode"
 				},
-				"name": "PGHD CDM ActEncounterCode"
+				"name": "PGHD CDM ActEncounterCode",
+				"description": "ValueSet for the PGHD CDM ActEncounterCode."
 			},
 			{
 				"exampleBoolean": false,
@@ -150,7 +152,8 @@
 					"reference": "ValueSet/pghd-cdm-admitsource",
 					"display": "PGHD CDM AdmitSource"
 				},
-				"name": "PGHD CDM AdmitSource"
+				"name": "PGHD CDM AdmitSource",
+				"description": "ValueSet for the PGHD CDM AdmitSource."
 			},
 			{
 				"exampleBoolean": false,
@@ -158,7 +161,8 @@
 					"reference": "StructureDefinition/pghd-cdm-devicetype",
 					"display": "PGHD CDM DeviceType Extension"
 				},
-				"name": "PGHD CDM DeviceType Extension"
+				"name": "PGHD CDM DeviceType Extension",
+				"description": "Definitions for the PGHD CDM DeviceType Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -166,7 +170,8 @@
 					"reference": "StructureDefinition/pghd-cdm-deviceusestarttiming",
 					"display": "PGHD CDM DeviceUseStartTiming Extension"
 				},
-				"name": "PGHD CDM DeviceUseStartTiming Extension"
+				"name": "PGHD CDM DeviceUseStartTiming Extension",
+				"description": "Definitions for the PGHD CDM DeviceUseStartTiming Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -174,7 +179,8 @@
 					"reference": "StructureDefinition/pghd-cdm-deviceuseendtiming",
 					"display": "PGHD CDM DeviceUseEndTiming Extension"
 				},
-				"name": "PGHD CDM DeviceUseEndTiming Extension"
+				"name": "PGHD CDM DeviceUseEndTiming Extension",
+				"description": "Definitions for the PGHD CDM DeviceUseEndTiming Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -182,7 +188,8 @@
 					"reference": "StructureDefinition/pghd-cdm-respondenttype",
 					"display": "PGHD CDM RespondentType Extension"
 				},
-				"name": "PGHD CDM RespondentType Extension"
+				"name": "PGHD CDM RespondentType Extension",
+				"description": "Definitions for the PGHD CDM RespondentType Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -190,7 +197,8 @@
 					"reference": "StructureDefinition/pghd-cdm-collectionmethod",
 					"display": "PGHD CDM CollectionMethod Extension"
 				},
-				"name": "PGHD CDM CollectionMethod Extension"
+				"name": "PGHD CDM CollectionMethod Extension",
+				"description": "Definitions for the PGHD CDM CollectionMethod Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -198,7 +206,8 @@
 					"reference": "StructureDefinition/pghd-cdm-timingsource",
 					"display": "PGHD CDM TimingSource Extension"
 				},
-				"name": "PGHD CDM TimingSource Extension"
+				"name": "PGHD CDM TimingSource Extension",
+				"description": "Definitions for the PGHD CDM TimingSource Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -206,7 +215,8 @@
 					"reference": "StructureDefinition/pghd-cdm-collectionmethodsource",
 					"display": "PGHD CDM CollectionMethodSource Extension"
 				},
-				"name": "PGHD CDM CollectionMethodSource Extension"
+				"name": "PGHD CDM CollectionMethodSource Extension",
+				"description": "Definitions for the PGHD CDM CollectionMethodSource Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -223,7 +233,8 @@
 					"reference": "ValueSet/pghd-cdm-dischargedisposition",
 					"display": "PGHD CDM DischargeDisposition"
 				},
-				"name": "PGHD CDM DischargeDisposition"
+				"name": "PGHD CDM DischargeDisposition",
+				"description": "ValueSet for the PGHD CDM DischargeDisposition."
 			},
 			{
 				"exampleBoolean": false,
@@ -231,7 +242,8 @@
 					"reference": "ValueSet/pghd-cdm-purposeofencounter",
 					"display": "PGHD CDM PurposeOfEncounter"
 				},
-				"name": "PGHD CDM PurposeOfEncounter"
+				"name": "PGHD CDM PurposeOfEncounter",
+				"description": "ValueSet for the PGHD CDM PurposeOfEncounter."
 			},
 			{
 				"exampleBoolean": false,
@@ -239,7 +251,8 @@
 					"reference": "ValueSet/pghd-cdm-device-type",
 					"display": "PGHD CDM DeviceType"
 				},
-				"name": "PGHD CDM DeviceType"
+				"name": "PGHD CDM DeviceType",
+				"description": "ValueSet for the PGHD CDM DeviceType."
 			},
 			{
 				"exampleBoolean": false,
@@ -247,7 +260,8 @@
 					"reference": "ValueSet/pghd-cdm-observationcodes",
 					"display": "PGHD CDM ObservationCodes"
 				},
-				"name": "PGHD CDM ObservationCodes"
+				"name": "PGHD CDM ObservationCodes",
+				"description": "ValueSet for the PGHD CDM ObservationCodes."
 			},
 			{
 				"exampleBoolean": false,
@@ -255,7 +269,8 @@
 					"reference": "ValueSet/pghd-cdm-obscompcomponentcodes",
 					"display": "PGHD CDM ObsCompComponentCodes"
 				},
-				"name": "PGHD CDM ObsCompComponentCodes"
+				"name": "PGHD CDM ObsCompComponentCodes",
+				"description": "ValueSet for the PGHD CDM ObsCompComponentCodes."
 			},
 			{
 				"exampleBoolean": false,
@@ -263,7 +278,8 @@
 					"reference": "ValueSet/pghd-cdm-questionnairecodes",
 					"display": "PGHD CDM QuestionnaireCodes"
 				},
-				"name": "PGHD CDM QuestionnaireCodes"
+				"name": "PGHD CDM QuestionnaireCodes",
+				"description": "ValueSet for the PGHD CDM QuestionnaireCodes."
 			},
 			{
 				"exampleBoolean": false,
@@ -271,7 +287,8 @@
 					"reference": "ValueSet/pghd-cdm-questionnaireresponsecodes",
 					"display": "PGHD CDM QuestionnaireResponseCodes"
 				},
-				"name": "PGHD CDM QuestionnaireResponse Profile"
+				"name": "PGHD CDM QuestionnaireResponseCodes",
+				"description": "ValueSet for the PGHD CDM QuestionnaireResponseCodes."
 			},
 			{
 				"exampleBoolean": false,
@@ -279,7 +296,8 @@
 					"reference": "CodeSystem/athena",
 					"display": "Athena"
 				},
-				"name": "Athena"
+				"name": "Athena",
+				"description": "Athena"
 			},
 			{
 				"exampleBoolean": false,
@@ -287,7 +305,8 @@
 					"reference": "CodeSystem/snubhcdmcodesystem",
 					"display": "SNUBH CDM Code System"
 				},
-				"name": "SNUBH CDM Code System"
+				"name": "SNUBH CDM Code System",
+				"description": "SNUBH CDM Code System"
 			},
 			{
 				"exampleBoolean": false,
@@ -295,7 +314,8 @@
 					"reference": "StructureDefinition/pghd-cdm-encounter",
 					"display": "PGHD CDM Encounter Profile"
 				},
-				"name": "PGHD CDM Encounter Profile"
+				"name": "PGHD CDM Encounter Profile",
+				"description": "Definitions for the PGHD CDM Encounter Profile."
 			},
 			{
 				"exampleBoolean": false,
@@ -303,7 +323,8 @@
 					"reference": "StructureDefinition/pghd-cdm-deviceusestatement",
 					"display": "PGHD CDM DeviceUseStatement Profile"
 				},
-				"name": "PGHD CDM DeviceUseStatement Profile"
+				"name": "PGHD CDM DeviceUseStatement Profile",
+				"description": "Definitions for the PGHD CDM DeviceUseStatement Profile."
 			},
 			{
 				"exampleBoolean": false,
@@ -311,7 +332,8 @@
 					"reference": "StructureDefinition/pghd-cdm-observationcomponent",
 					"display": "PGHD CDM ObservationComponent Profile"
 				},
-				"name": "PGHD CDM ObservationComponent Profile"
+				"name": "PGHD CDM ObservationComponent Profile",
+				"description": "Definitions for the PGHD CDM ObservationComponent Profile."
 			},
 			{
 				"exampleBoolean": false,
@@ -957,7 +979,8 @@
 					"reference": "StructureDefinition/pghd-cdm-questionnaireitemsourcedatatype",
 					"display": "PGHD CDM QuestionnaireItemSourceDataType Extension"
 				},
-				"name": "PGHD CDM QuestionnaireItemSourceDataType Extension"
+				"name": "PGHD CDM QuestionnaireItemSourceDataType Extension",
+				"description": "Definitions for the PGHD CDM QuestionnaireItemSourceDataType Extension."
 			},
 			{
 				"exampleBoolean": false,
@@ -965,7 +988,8 @@
 					"reference": "StructureDefinition/pghd-cdm-questionnaireresponse",
 					"display": "PGHD CDM QuestionnaireResponse Profile"
 				},
-				"name": "PGHD CDM QuestionnaireResponse Profile"
+				"name": "PGHD CDM QuestionnaireResponse Profile",
+				"description": "Definitions for the PGHD CDM QuestionnaireResponse Profile."
 			},
 			{
 				"exampleBoolean": false,
@@ -1056,6 +1080,7 @@
 					"reference": "DeviceUseStatement/2342552568"
 				},
 				"name": "DeviceUseStatement Example",
+				"description": "DeviceUseStatement Example",
 				"exampleCanonical": "https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-deviceusestatement"
 			}
 		],
