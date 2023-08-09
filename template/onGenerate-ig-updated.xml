@@ -1,74 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-   <id value="snubh.cdm.pghd.to.fhir"/>
+   <id value="hl7.fhir.mi.base"/>
    <text>
       <status value="extensions"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
-         <h2>CDMPGHDToFHIR</h2>
+         <h2>MIBase</h2>
          <p>The official URL for this implementation guide is: </p>
-         <pre>https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/ImplementationGuide/snubh.cdm.pghd.to.fhir</pre>
-         <div>
-            <p>CDM PGHD to FHIR 는 CDM PGHD 데이터를 FHIR Resource 로 변환하는 데 필요한 extension, value set, search parameter, operation 등이 포함된 FHIR Profile 의 집합을 정의합니다.
-이 구현 지침에 포함된 Profile은 HL7 FHIR의 Resource의 기본 Structure Definition에서 파생되어 정의 되었으며, 일부 항목은 US-Core 에 정의된 Profile 사양을 참조하여 작성 되었습니다.</p>
-            <h4>문서 안내</h4>
-            <p>이 문서의 구성은 다음과 같습니다.</p>
-            <ul>
-               <li>
-                  <a href="index.html">Home</a> : CDM PGHD to FHIR 홈페이지</li>
-               <li>
-                  <a href="profiles_and_extensions.html">Profiles and Extensions</a> : CDM PGHD to FHIR Profile 페이지</li>
-               <li>
-                  <a href="search_parameters_and_operations.html">Search Parameters and Operations</a> : Search Parameters and Operations 페이지</li>
-               <li>
-                  <a href="terminology.html">Terminology</a> : Terminology 페이지</li>
-               <li>
-                  <a href="downloads.html">Downloads</a> : 다운로드 페이지</li>
-            </ul>
-         </div>
+         <pre>http://iop.ezcaretech.com/fhir/mi/base/ImplementationGuide/hl7.fhir.mi.base</pre>
       </div>
    </text>
-   <url value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/ImplementationGuide/snubh.cdm.pghd.to.fhir"/>
-   <version value="1.0.0"/>
-   <name value="CDMPGHDToFHIR"/>
-   <title value="CDM PGHD to FHIR"/>
+   <url value="http://iop.ezcaretech.com/fhir/mi/base/ImplementationGuide/hl7.fhir.mi.base"/>
+   <version value="0.1.0"/>
+   <name value="MIBase"/>
+   <title value="MI Base"/>
    <status value="draft"/>
-   <experimental value="false"/>
-   <date value="2022-05-02"/>
-   <publisher value="SNUBH-HIRC"/>
+   <date value="2023-07-24T09:33:08+09:00"/>
+   <publisher value="MKJ"/>
    <contact>
-      <name value="Seoul National University Bundang Hospital"/>
+      <name value="MKJ"/>
       <telecom>
          <system value="url"/>
-         <value value="https://www.snubh.org/"/>
+         <value value="http://mkj.com"/>
       </telecom>
    </contact>
-   <description value="CDM PGHD to FHIR 는 CDM PGHD 데이터를 FHIR Resource 로 변환하는 데 필요한 extension, value set, search parameter, operation 등이 포함된 FHIR Profile 의 집합을 정의합니다.&#xA;이 구현 지침에 포함된 Profile은 HL7 FHIR의 Resource의 기본 Structure Definition에서 파생되어 정의 되었으며, 일부 항목은 US-Core 에 정의된 Profile 사양을 참조하여 작성 되었습니다.&#xA;&#xA;#### 문서 안내&#xA;&#xA;이 문서의 구성은 다음과 같습니다.&#xA;&#xA;- [Home](index.html) : CDM PGHD to FHIR 홈페이지&#xA;- [Profiles and Extensions](profiles_and_extensions.html) : CDM PGHD to FHIR Profile 페이지&#xA;- [Search Parameters and Operations](search_parameters_and_operations.html) : Search Parameters and Operations 페이지&#xA;- [Terminology](terminology.html) : Terminology 페이지&#xA;- [Downloads](downloads.html) : 다운로드 페이지"/>
    <jurisdiction>
       <coding>
          <system value="urn:iso:std:iso:3166"/>
          <code value="KR"/>
          <display value="Korea, Republic of"/>
       </coding>
-      <text value="Korea, Republic of"/>
    </jurisdiction>
-   <packageId value="ko.org.snubh.hirc.cdmpghdtofhir"/>
+   <packageId value="hl7.fhir.mi.base"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
-   <dependsOn id="hl7fhiruscore">
-      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core#4.0.0"/>
-      <packageId value="hl7.fhir.us.core"/>
-      <version value="4.0.0"/>
+   <dependsOn id="hl7tx">
+      <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+      <packageId value="hl7.terminology.r4"/>
+      <version value="5.0.0"/>
    </dependsOn>
    <definition>
-      <grouping id="-dyn-operationdefinition">
-         <name value="Behavior: Operation Definitions"/>
-         <description value="These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide"/>
-      </grouping>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="copyrightyear"/>
+         </extension>
+         <extension url="value">
+            <valueString value="2023+"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="releaselabel"/>
+         </extension>
+         <extension url="value">
+            <valueString value="ci-build"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="autoload-resources"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-qa"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/qa"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-temp"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/pages"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-output"/>
+         </extension>
+         <extension url="value">
+            <valueString value="output"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-suppressed-warnings"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/ignoreWarnings.txt"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-history"/>
+         </extension>
+         <extension url="value">
+            <valueString value="http://iop.ezcaretech.com/fhir/mi/base/history.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-html"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-md"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page-md.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-contact"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-context"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-copyright"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-jurisdiction"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-license"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-publisher"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-version"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="active-tables"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="fmm-definition"/>
+         </extension>
+         <extension url="value">
+            <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="propagate-status"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="excludelogbinaryformat"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="tabbed-snapshots"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
 
-      <grouping id="-dyn-searchparameter">
-         <name value="Behavior: Search Parameters"/>
-         <description value="These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."/>
-      </grouping>
+
+
+
+
+
+
+
+
 
 
 
@@ -86,13 +257,6 @@
          <name value="Terminology: Value Sets"/>
          <description value="These define sets of codes used by systems conforming to this implementation guide"/>
       </grouping>
-      <grouping id="-term-codesystem">
-         <name value="Terminology: Code Systems"/>
-         <description value="These define new code systems used by systems conforming to this implementation guide"/>
-      </grouping>
-
-
-
 
 
 
@@ -105,175 +269,165 @@
 
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-patient.html"/>
+            <valueUri value="Observation-BloodPressureExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-patient"/>
-            <display value="PGHD CDM Patient Profile"/>
+            <reference value="Observation/BloodPressureExample"/>
          </reference>
-         <name value="PGHD CDM Patient Profile"/>
-         <description value="Definitions for the PGHD CDM Patient Profile."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
+         <name value="BloodPressureExample"/>
+         <description value="An Example of BloodPressure"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseBloodPressureProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-visittype.html"/>
+            <valueUri value="Observation-BMIExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-visittype"/>
-            <display value="PGHD CDM VisitType Extension"/>
+            <reference value="Observation/BMIExample"/>
          </reference>
-         <name value="PGHD CDM VisitType Extension"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <name value="BMIExample"/>
+         <description value="An Example of BMI"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseBMIProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-organization.html"/>
+            <valueUri value="Observation-BodyHeightExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-organization"/>
-            <display value="PGHD CDM Organization Profile"/>
+            <reference value="Observation/BodyHeightExample"/>
          </reference>
-         <name value="PGHD CDM Organization Profile"/>
-         <description value="Definitions for the PGHD CDM Organization Profile."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
+         <name value="BodyHeightExample"/>
+         <description value="An Example of Body Height"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseBodyHeightProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-device.html"/>
+            <valueUri value="Observation-BodyTemperatureExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-device"/>
-            <display value="PGHD CDM Device Profile"/>
+            <reference value="Observation/BodyTemperatureExample"/>
          </reference>
-         <name value="PGHD CDM Device Profile"/>
-         <description value="Definitions for the PGHD CDM Device Profile."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
+         <name value="BodyTemperatureExample"/>
+         <description value="An Example of Body Temperature"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseBodyTemperatureProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-questionnaire.html"/>
+            <valueUri value="Observation-BodyWeightExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-questionnaire"/>
-            <display value="PGHD CDM Questionnaire Profile"/>
+            <reference value="Observation/BodyWeightExample"/>
          </reference>
-         <name value="PGHD CDM Questionnaire Profile"/>
-         <description value="Definitions for the PGHD CDM Questionnaire Profile."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
+         <name value="BodyWeightExample"/>
+         <description value="An Example of Body Weight"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseBodyWeightProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="OperationDefinition"/>
+            <valueString value="Condition"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="OperationDefinition-observation-snapshot.html"/>
+            <valueUri value="Condition-ConditionExample.html"/>
          </extension>
          <reference>
-            <reference value="OperationDefinition/observation-snapshot"/>
-            <display value="observation-snapshot"/>
+            <reference value="Condition/ConditionExample"/>
          </reference>
-         <name value="observation-snapshot"/>
-         <description value="특정 시점이나 특정 조건에 대한 조회 결과를 사용 전에 구조화화여 필요할 때 DB 쿼리나 객체 직렬화 과정 없이 기존에 구조화된 데이터를 조회하여 사용하도록 정의한 operation.&#xA;&#xA;```&#xA;POST [Base URL]/Observation/$snapshot&#xA;```"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-operationdefinition"/>
+         <name value="ConditionExample"/>
+         <description value="An Example of Condition"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseConditionProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="OperationDefinition"/>
+            <valueString value="Encounter"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="OperationDefinition-readsnapshot.html"/>
+            <valueUri value="Encounter-EncounterExample.html"/>
          </extension>
          <reference>
-            <reference value="OperationDefinition/readsnapshot"/>
-            <display value="readsnapshot"/>
+            <reference value="Encounter/EncounterExample"/>
          </reference>
-         <name value="readsnapshot"/>
-         <description value="$snapshot을 통해 사전에 구조화된 데이터를 가져올 때 사용하는 operation. HTTP GET method 사용&#xA;&#xA;```&#xA;GET [Base URL]/Bundle/[id]/$readsnapshot&#xA;```"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-operationdefinition"/>
+         <name value="EncounterExample"/>
+         <description value="An example of a Practitioner"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseEncounterProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-cmsplaceofservicecodes.html"/>
+            <valueUri value="Observation-GlasgowComaScaleExample.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/cmsplaceofservicecodes"/>
-            <display value="Place of Service Codes for Professional Claims(CMS)"/>
+            <reference value="Observation/GlasgowComaScaleExample"/>
          </reference>
-         <name value="Place of Service Codes for Professional Claims(CMS)"/>
-         <description value="Place of Service Codes are two-digit codes placed on health care professional claims to indicate the setting in which a service was provided. The Centers for Medicare &amp; Medicaid Services (CMS) maintain POS codes used throughout the health care industry.&#xA;&#xA;This code set is required for use in the implementation guide adopted as the national standard for electronic transmission of professional health care claims under the provisions of the Health Insurance Portability and Accountability Act of 1996 (HIPAA). HIPAA directed the Secretary of HHS to adopt national standards for electronic transactions. These standard transactions require all health plans and providers to use standard code sets to populate data elements in each transaction. The Transaction and Code Set Rule adopted the ASC X12N-837 Health Care Claim: Professional, volumes 1 and 2, version 4010, as the standard for electronic submission of professional claims. This standard names the POS code set currently maintained by CMS as the code set to be used for describing sites of service in such claims. POS information is often needed to determine the acceptability of direct billing of Medicare, Medicaid and private insurance services provided by a given provider.&#xA;&#xA;Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set)"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
+         <name value="GlasgowComaScaleExample"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseGlasgowComaScaleProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-umls.html"/>
+            <valueUri value="Observation-HeartRateExample.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/umls"/>
-            <display value="Unified Medical Language System"/>
+            <reference value="Observation/HeartRateExample"/>
          </reference>
-         <name value="Unified Medical Language System"/>
-         <description value="UMLS codes as CUIs making up the values in a coding system. More information may be found at http://www.nlm.nih.gov/research/umls/"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
+         <name value="HeartRateExample"/>
+         <description value="An Example of HeartRate"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseHeartRateProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+            <valueString value="Immunization"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-v3-ucum.html"/>
+            <valueUri value="Immunization-ImmunizationExample.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/v3-ucum"/>
-            <display value="Unified Code for Units of Measure (UCUM)"/>
+            <reference value="Immunization/ImmunizationExample"/>
          </reference>
-         <name value="Unified Code for Units of Measure (UCUM)"/>
-         <description value="The Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business. The purpose is to facilitate unambiguous electronic communication of quantities together with their units. The focus is on electronic communication, as opposed to communication between humans. A typical application of The Unified Code for Units of Measure are electronic data interchange (EDI) protocols, but there is nothing that prevents it from being used in other types of machine communication."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
+         <name value="ImmunizationExample"/>
+         <description value="An Example of Immunization"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseImmunizationProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-actencountercode.html"/>
+            <valueUri value="ValueSet-krcore-organization-type.html"/>
          </extension>
          <reference>
-            <reference value="ValueSet/pghd-cdm-actencountercode"/>
-            <display value="PGHD CDM ActEncounterCode"/>
+            <reference value="ValueSet/krcore-organization-type"/>
          </reference>
-         <name value="PGHD CDM ActEncounterCode"/>
+         <name value="KR Core Organization Type"/>
+         <description value="KR Core 기관 구분 코드"/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
       </resource>
@@ -282,284 +436,133 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-admitsource.html"/>
+            <valueUri value="ValueSet-krcore-practitioner-license-code.html"/>
          </extension>
          <reference>
-            <reference value="ValueSet/pghd-cdm-admitsource"/>
-            <display value="PGHD CDM AdmitSource"/>
+            <reference value="ValueSet/krcore-practitioner-license-code"/>
          </reference>
-         <name value="PGHD CDM AdmitSource"/>
+         <name value="KR Core Practitioner License Code"/>
+         <description value="KR Core 보건의료인 면허 코드"/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-devicetype.html"/>
+            <valueUri value="ValueSet-krcore-practitioner-specialty.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-devicetype"/>
-            <display value="PGHD CDM DeviceType Extension"/>
+            <reference value="ValueSet/krcore-practitioner-specialty"/>
          </reference>
-         <name value="PGHD CDM DeviceType Extension"/>
+         <name value="KR Core Practitioner Specialty"/>
+         <description value="KR Core 의료인 진료과 코드"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-deviceusestarttiming.html"/>
+            <valueUri value="Observation-LaboratoryResultObservationExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-deviceusestarttiming"/>
-            <display value="PGHD CDM DeviceUseStartTiming Extension"/>
+            <reference value="Observation/LaboratoryResultObservationExample"/>
          </reference>
-         <name value="PGHD CDM DeviceUseStartTiming Extension"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <name value="LaboratoryResultObservationExample"/>
+         <description value="An Example of Laboratory Result Observation"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseLaboratoryResultObservationProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="Medication"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-deviceuseendtiming.html"/>
+            <valueUri value="Medication-MedicationExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-deviceuseendtiming"/>
-            <display value="PGHD CDM DeviceUseEndTiming Extension"/>
+            <reference value="Medication/MedicationExample"/>
          </reference>
-         <name value="PGHD CDM DeviceUseEndTiming Extension"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <name value="MedicationExample"/>
+         <description value="MI Base Medication Profile"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseMedicationProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="MedicationRequest"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-respondenttype.html"/>
+            <valueUri value="MedicationRequest-MedicationRequestExample.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-respondenttype"/>
-            <display value="PGHD CDM RespondentType Extension"/>
+            <reference value="MedicationRequest/MedicationRequestExample"/>
          </reference>
-         <name value="PGHD CDM RespondentType Extension"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <name value="MedicationRequestExample"/>
+         <description value="An Example of MedicationRequest"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseMedicationRequestProfile"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-collectionmethod.html"/>
+            <valueUri value="ValueSet-MIBaseGCSEyeOpeningAnswer.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-collectionmethod"/>
-            <display value="PGHD CDM CollectionMethod Extension"/>
+            <reference value="ValueSet/MIBaseGCSEyeOpeningAnswer"/>
          </reference>
-         <name value="PGHD CDM CollectionMethod Extension"/>
+         <name value="MI Base GCS EyeOpening Answer"/>
+         <description value="Normative Answer List for Glasgow coma score EyeOpening."/>
          <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-timingsource.html"/>
+            <valueUri value="ValueSet-MIBaseGCSMotorAnswer.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-timingsource"/>
-            <display value="PGHD CDM TimingSource Extension"/>
+            <reference value="ValueSet/MIBaseGCSMotorAnswer"/>
          </reference>
-         <name value="PGHD CDM TimingSource Extension"/>
+         <name value="MI Base GCS Motor Answer"/>
+         <description value="Normative Answer List for Glasgow coma score motor."/>
          <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+            <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-collectionmethodsource.html"/>
+            <valueUri value="ValueSet-MIBaseGCSVerbalAnswer.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-collectionmethodsource"/>
-            <display value="PGHD CDM CollectionMethodSource Extension"/>
+            <reference value="ValueSet/MIBaseGCSVerbalAnswer"/>
          </reference>
-         <name value="PGHD CDM CollectionMethodSource Extension"/>
+         <name value="MI Base GCS Verbal Answer"/>
+         <description value="Normative Answer List for Glasgow coma score Verbal."/>
          <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-observation.html"/>
+            <valueUri value="StructureDefinition-MIBaseBloodPressureProfile.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-observation"/>
-            <display value="PGHD CDM Observation Profile"/>
+            <reference value="StructureDefinition/MIBaseBloodPressureProfile"/>
          </reference>
-         <name value="PGHD CDM Observation Profile"/>
-         <description value="Definitions for the PGHD CDM Observation Profile."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-dischargedisposition.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/pghd-cdm-dischargedisposition"/>
-            <display value="PGHD CDM DischargeDisposition"/>
-         </reference>
-         <name value="PGHD CDM DischargeDisposition"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-purposeofencounter.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/pghd-cdm-purposeofencounter"/>
-            <display value="PGHD CDM PurposeOfEncounter"/>
-         </reference>
-         <name value="PGHD CDM PurposeOfEncounter"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-device-type.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/pghd-cdm-device-type"/>
-            <display value="PGHD CDM DeviceType"/>
-         </reference>
-         <name value="PGHD CDM DeviceType"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-observationcodes.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/pghd-cdm-observationcodes"/>
-            <display value="PGHD CDM ObservationCodes"/>
-         </reference>
-         <name value="PGHD CDM ObservationCodes"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-obscompcomponentcodes.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/pghd-cdm-obscompcomponentcodes"/>
-            <display value="PGHD CDM ObsCompComponentCodes"/>
-         </reference>
-         <name value="PGHD CDM ObsCompComponentCodes"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-questionnairecodes.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/pghd-cdm-questionnairecodes"/>
-            <display value="PGHD CDM QuestionnaireCodes"/>
-         </reference>
-         <name value="PGHD CDM QuestionnaireCodes"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-pghd-cdm-questionnaireresponsecodes.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/pghd-cdm-questionnaireresponsecodes"/>
-            <display value="PGHD CDM QuestionnaireResponseCodes"/>
-         </reference>
-         <name value="PGHD CDM QuestionnaireResponse Profile"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-athena.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/athena"/>
-            <display value="Athena"/>
-         </reference>
-         <name value="Athena"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-snubhcdmcodesystem.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/snubhcdmcodesystem"/>
-            <display value="SNUBH CDM Code System"/>
-         </reference>
-         <name value="SNUBH CDM Code System"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-encounter.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/pghd-cdm-encounter"/>
-            <display value="PGHD CDM Encounter Profile"/>
-         </reference>
-         <name value="PGHD CDM Encounter Profile"/>
+         <name value="MIBaseBloodPressureProfile"/>
+         <description value="MI Base BloodPressure Profile"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -568,13 +571,13 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-deviceusestatement.html"/>
+            <valueUri value="StructureDefinition-MIBaseBMIProfile.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-deviceusestatement"/>
-            <display value="PGHD CDM DeviceUseStatement Profile"/>
+            <reference value="StructureDefinition/MIBaseBMIProfile"/>
          </reference>
-         <name value="PGHD CDM DeviceUseStatement Profile"/>
+         <name value="MIBaseBMIProfile"/>
+         <description value="MI Base BMI Profile"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -583,1163 +586,295 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-observationcomponent.html"/>
+            <valueUri value="StructureDefinition-MIBaseBodyHeightProfile.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-observationcomponent"/>
-            <display value="PGHD CDM ObservationComponent Profile"/>
+            <reference value="StructureDefinition/MIBaseBodyHeightProfile"/>
          </reference>
-         <name value="PGHD CDM ObservationComponent Profile"/>
+         <name value="MIBaseBodyHeightProfile"/>
+         <description value="MI Base Body Height Profile"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-id.html"/>
+            <valueUri value="StructureDefinition-MIBaseBodyTemperatureProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-id"/>
-            <display value="PGHDCDMPatientId"/>
+            <reference value="StructureDefinition/MIBaseBodyTemperatureProfile"/>
          </reference>
-         <name value="PGHDCDMPatientId"/>
-         <description value="환자 ID"/>
+         <name value="MIBaseBodyTemperatureProfile"/>
+         <description value="MI Base Body Temperature Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-address-city.html"/>
+            <valueUri value="StructureDefinition-MIBaseBodyWeightProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-address-city"/>
-            <display value="PGHDCDMPatientAddressCity"/>
+            <reference value="StructureDefinition/MIBaseBodyWeightProfile"/>
          </reference>
-         <name value="PGHDCDMPatientAddressCity"/>
-         <description value="주소-시"/>
+         <name value="MIBaseBodyWeightProfile"/>
+         <description value="MI Base Body Weight Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-gender.html"/>
+            <valueUri value="StructureDefinition-MIBaseConditionProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-gender"/>
-            <display value="PGHDCDMPatientGender"/>
+            <reference value="StructureDefinition/MIBaseConditionProfile"/>
          </reference>
-         <name value="PGHDCDMPatientGender"/>
-         <description value="성별"/>
+         <name value="MIBaseConditionProfile"/>
+         <description value="MI Base Condition Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-address.html"/>
+            <valueUri value="StructureDefinition-MIBaseEncounterProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-address"/>
-            <display value="PGHDCDMPatientAddress"/>
+            <reference value="StructureDefinition/MIBaseEncounterProfile"/>
          </reference>
-         <name value="PGHDCDMPatientAddress"/>
-         <description value="주소"/>
+         <name value="MIBaseEncounterProfile"/>
+         <description value="MI Base Encounter Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-organization.html"/>
+            <valueUri value="StructureDefinition-MIBaseGlasgowComaScaleProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-organization"/>
-            <display value="PGHDCDMPatientOrganization"/>
+            <reference value="StructureDefinition/MIBaseGlasgowComaScaleProfile"/>
          </reference>
-         <name value="PGHDCDMPatientOrganization"/>
-         <description value="의료기관 정보"/>
+         <name value="MIBaseGlasgowComaScaleProfile"/>
+         <description value="MI Base GlasgowComaScale Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-identifier.html"/>
+            <valueUri value="StructureDefinition-MIBaseHeartRateProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-identifier"/>
-            <display value="PGHDCDMPatientIdentifier"/>
+            <reference value="StructureDefinition/MIBaseHeartRateProfile"/>
          </reference>
-         <name value="PGHDCDMPatientIdentifier"/>
-         <description value="환자 ID"/>
+         <name value="MIBaseHeartRateProfile"/>
+         <description value="MI Base HeartRate Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-birthdate.html"/>
+            <valueUri value="StructureDefinition-MIBaseImmunizationProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-birthdate"/>
-            <display value="PGHDCDMPatientBirthDate"/>
+            <reference value="StructureDefinition/MIBaseImmunizationProfile"/>
          </reference>
-         <name value="PGHDCDMPatientBirthDate"/>
-         <description value="성별"/>
+         <name value="MIBaseImmunizationProfile"/>
+         <description value="MI Base Immunization Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-death-date.html"/>
+            <valueUri value="StructureDefinition-MIBaseLaboratoryResultObservationProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-death-date"/>
-            <display value="PGHDCDMPatientDeathDate"/>
+            <reference value="StructureDefinition/MIBaseLaboratoryResultObservationProfile"/>
          </reference>
-         <name value="PGHDCDMPatientDeathDate"/>
-         <description value="사망일"/>
+         <name value="MIBaseLaboratoryResultObservationProfile"/>
+         <description value="MI Base Laboratory Result Observation Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-address-state.html"/>
+            <valueUri value="StructureDefinition-MIBaseMedicationProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-address-state"/>
-            <display value="PGHDCDMPatientAddressState"/>
+            <reference value="StructureDefinition/MIBaseMedicationProfile"/>
          </reference>
-         <name value="PGHDCDMPatientAddressState"/>
-         <description value="주소-도"/>
+         <name value="MIBaseMedicationProfile"/>
+         <description value="MI Base Medication Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-patient-address-postalcode.html"/>
+            <valueUri value="StructureDefinition-MIBaseMedicationRequestProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-patient-address-postalcode"/>
-            <display value="PGHDCDMPatientAddressPostalCode"/>
+            <reference value="StructureDefinition/MIBaseMedicationRequestProfile"/>
          </reference>
-         <name value="PGHDCDMPatientAddressPostalCode"/>
-         <description value="주소-우편번호"/>
+         <name value="MIBaseMedicationRequestProfile"/>
+         <description value="MI Base MedicationRequest Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-loinc.html"/>
+            <valueUri value="StructureDefinition-MIBaseOrganizationProfile.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/loinc"/>
-            <display value="Logical Observation Identifiers Names and Codes"/>
+            <reference value="StructureDefinition/MIBaseOrganizationProfile"/>
          </reference>
-         <name value="Logical Observation Identifiers Names and Codes"/>
+         <name value="MIBaseOrganizationProfile"/>
+         <description value="MI Base Organization Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="OperationDefinition"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="OperationDefinition-questionnaireresponse-snapshot.html"/>
+            <valueUri value="StructureDefinition-MIBasePatientProfile.html"/>
          </extension>
          <reference>
-            <reference value="OperationDefinition/questionnaireresponse-snapshot"/>
-            <display value="questionnaireresponse-snapshot"/>
+            <reference value="StructureDefinition/MIBasePatientProfile"/>
          </reference>
-         <name value="questionnaireresponse-snapshot"/>
-         <description value="특정 시점이나 특정 조건에 대한 조회 결과를 사용 전에 구조화화여 필요할 때 DB 쿼리나 객체 직렬화 과정 없이 기존에 구조화된 데이터를 조회하여 사용하도록 정의한 operation.&#xA;&#xA;```&#xA;POST [Base URL]/QuestionnaireResponse/$snapshot&#xA;```"/>
+         <name value="MIBasePatientProfile"/>
+         <description value="MI Base Patient Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-operationdefinition"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-deviceusestatement-id.html"/>
+            <valueUri value="StructureDefinition-MIBasePractitionerProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-deviceusestatement-id"/>
-            <display value="PGHDCDMDeviceUseStatementId"/>
+            <reference value="StructureDefinition/MIBasePractitionerProfile"/>
          </reference>
-         <name value="PGHDCDMDeviceUseStatementId"/>
-         <description value="Device ID"/>
+         <name value="MIBasePractitionerProfile"/>
+         <description value="MI Base Practitioner Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-deviceusestatement-devicetype.html"/>
+            <valueUri value="StructureDefinition-MIBasePractitionerRoleProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-deviceusestatement-devicetype"/>
-            <display value="PGHDCDMDeviceUseStatementDeviceType"/>
+            <reference value="StructureDefinition/MIBasePractitionerRoleProfile"/>
          </reference>
-         <name value="PGHDCDMDeviceUseStatementDeviceType"/>
-         <description value="사용된 기기 유형"/>
+         <name value="MIBasePractitionerRoleProfile"/>
+         <description value="MI Base PractitionerRole Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-deviceusestatement-subject.html"/>
+            <valueUri value="StructureDefinition-MIBaseProcedureProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-deviceusestatement-subject"/>
-            <display value="PGHDCDMDeviceUseStatementSubject"/>
+            <reference value="StructureDefinition/MIBaseProcedureProfile"/>
          </reference>
-         <name value="PGHDCDMDeviceUseStatementSubject"/>
-         <description value="환자 ID"/>
+         <name value="MIBaseProcedureProfile"/>
+         <description value="MI Base Procedure Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
+            <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-deviceusestatement-patient.html"/>
+            <valueUri value="StructureDefinition-MIBasePulseOximetryProfile.html"/>
          </extension>
          <reference>
-            <reference value="SearchParameter/pghd-cdm-deviceusestatement-patient"/>
-            <display value="PGHDCDMDeviceUseStatementPatient"/>
+            <reference value="StructureDefinition/MIBasePulseOximetryProfile"/>
          </reference>
-         <name value="PGHDCDMDeviceUseStatementPatient"/>
-         <description value="환자 ID"/>
+         <name value="MIBasePulseOximetryProfile"/>
+         <description value="MI Base PulseOximetry Profile"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-encounter-status.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-encounter-status"/>
-            <display value="PGHDCDMEncounterStatus"/>
-         </reference>
-         <name value="PGHDCDMEncounterStatus"/>
-         <description value="수진 분류"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-encounter-patient.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-encounter-patient"/>
-            <display value="PGHDCDMEncounterPatient"/>
-         </reference>
-         <name value="PGHDCDMEncounterPatient"/>
-         <description value="환자 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-encounter-id.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-encounter-id"/>
-            <display value="PGHDCDMEncounterId"/>
-         </reference>
-         <name value="PGHDCDMEncounterId"/>
-         <description value="수진 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-encounter-subject.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-encounter-subject"/>
-            <display value="PGHDCDMEncounterSubject"/>
-         </reference>
-         <name value="PGHDCDMEncounterSubject"/>
-         <description value="환자 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-encounter-class.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-encounter-class"/>
-            <display value="PGHDCDMEncounterClass"/>
-         </reference>
-         <name value="PGHDCDMEncounterClass"/>
-         <description value="수진 분류"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-encounter-serviceprovider.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-encounter-serviceprovider"/>
-            <display value="PGHDCDMEncounterServiceProvider"/>
-         </reference>
-         <name value="PGHDCDMEncounterServiceProvider"/>
-         <description value="기관/진료과 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-encounter-date.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-encounter-date"/>
-            <display value="PGHDCDMEncounterDate"/>
-         </reference>
-         <name value="PGHDCDMEncounterDate"/>
-         <description value="수진 분류"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-id.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-id"/>
-            <display value="PGHDCDMObservationId"/>
-         </reference>
-         <name value="PGHDCDMObservationId"/>
-         <description value="관측 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-date.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-date"/>
-            <display value="PGHDCDMObservationDate"/>
-         </reference>
-         <name value="PGHDCDMObservationDate"/>
-         <description value="관측 일시"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-device-type.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-device-type"/>
-            <display value="PGHDCDMObservationDeviceType"/>
-         </reference>
-         <name value="PGHDCDMObservationDeviceType"/>
-         <description value="관측 기기 유형"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-patient-gender.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-patient-gender"/>
-            <display value="PGHDCDMObservationPatientGender"/>
-         </reference>
-         <name value="PGHDCDMObservationPatientGender"/>
-         <description value="관측 대상 성별"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-contained.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-contained"/>
-            <display value="PGHDCDMObservationContained"/>
-         </reference>
-         <name value="PGHDCDMObservationContained"/>
-         <description value="관측 대상 및 기기 Resource 표시"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-code.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-code"/>
-            <display value="PGHDCDMObservationCode"/>
-         </reference>
-         <name value="PGHDCDMObservationCode"/>
-         <description value="관측 코드"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-device-use-end-timing.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-device-use-end-timing"/>
-            <display value="PGHDCDMObservationDeviceUseEndTiming"/>
-         </reference>
-         <name value="PGHDCDMObservationDeviceUseEndTiming"/>
-         <description value="관측 종료일"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-device-use-start-timing.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-device-use-start-timing"/>
-            <display value="PGHDCDMObservationDeviceUseStartTiming"/>
-         </reference>
-         <name value="PGHDCDMObservationDeviceUseStartTiming"/>
-         <description value="관측 시작일"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-patient.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-patient"/>
-            <display value="PGHDCDMObservationPatient"/>
-         </reference>
-         <name value="PGHDCDMObservationPatient"/>
-         <description value="관측 대상"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-subject.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-subject"/>
-            <display value="PGHDCDMObservationSubject"/>
-         </reference>
-         <name value="PGHDCDMObservationSubject"/>
-         <description value="관측 대상"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-category.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-category"/>
-            <display value="PGHDCDMObservationCategory"/>
-         </reference>
-         <name value="PGHDCDMObservationCategory"/>
-         <description value="관측 유형"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-subject-gender.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-subject-gender"/>
-            <display value="PGHDCDMObservationSubjectGender"/>
-         </reference>
-         <name value="PGHDCDMObservationSubjectGender"/>
-         <description value="관측 대상 성별"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-status.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-status"/>
-            <display value="PGHDCDMObservationStatus"/>
-         </reference>
-         <name value="PGHDCDMObservationStatus"/>
-         <description value="관측 상태"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-date.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-date"/>
-            <display value="PGHDCDMObservationComponentDate"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentDate"/>
-         <description value="관측 일시"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-component-code.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-component-code"/>
-            <display value="PGHDCDMObservationComponentComponentCode"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentComponentCode"/>
-         <description value="하위 관측 코드"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-category.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-category"/>
-            <display value="PGHDCDMObservationComponentCategory"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentCategory"/>
-         <description value="관측 유형"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-code.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-code"/>
-            <display value="PGHDCDMObservationComponentCode"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentCode"/>
-         <description value="관측 코드"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-contained.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-contained"/>
-            <display value="PGHDCDMObservationComponentContained"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentContained"/>
-         <description value="관측 대상 및 기기 Resource 표시"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-device-type.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-device-type"/>
-            <display value="PGHDCDMObservationComponentDeviceType"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentDeviceType"/>
-         <description value="관측 기기 유형"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-subject-gender.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-subject-gender"/>
-            <display value="PGHDCDMObservationComponentSubjectGender"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentSubjectGender"/>
-         <description value="관측 대상 성별"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-patient.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-patient"/>
-            <display value="PGHDCDMObservationComponentPatient"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentPatient"/>
-         <description value="관측 대상"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-id.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-id"/>
-            <display value="PGHDCDMObservationComponentId"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentId"/>
-         <description value="관측 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-patient-gender.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-patient-gender"/>
-            <display value="PGHDCDMObservationComponentPatientGender"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentPatientGender"/>
-         <description value="관측 대상 성별"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-device-use-end-timing.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-device-use-end-timing"/>
-            <display value="PGHDCDMObservationComponentDeviceUseEndTiming"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentDeviceUseEndTiming"/>
-         <description value="관측 종료일"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-subject.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-subject"/>
-            <display value="PGHDCDMObservationComponentSubject"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentSubject"/>
-         <description value="관측 대상"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-status.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-status"/>
-            <display value="PGHDCDMObservationComponentStatus"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentStatus"/>
-         <description value="관측 상태"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-profile.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-profile"/>
-            <display value="PGHDCDMObservationComponentProfile"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentProfile"/>
-         <description value="관측 결과 표현 방식(Profile)"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-observation-component-device-use-start-timing.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-observation-component-device-use-start-timing"/>
-            <display value="PGHDCDMObservationComponentDeviceUseStartTiming"/>
-         </reference>
-         <name value="PGHDCDMObservationComponentDeviceUseStartTiming"/>
-         <description value="관측 시작일"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-organization-address-state.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-organization-address-state"/>
-            <display value="PGHDCDMOrganizationAddressState"/>
-         </reference>
-         <name value="PGHDCDMOrganizationAddressState"/>
-         <description value="주소-도"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-organization-name.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-organization-name"/>
-            <display value="PGHDCDMOrganizationName"/>
-         </reference>
-         <name value="PGHDCDMOrganizationName"/>
-         <description value="기관 이름"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-organization-address-postalcode.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-organization-address-postalcode"/>
-            <display value="PGHDCDMOrganizationAddressPostalCode"/>
-         </reference>
-         <name value="PGHDCDMOrganizationAddressPostalCode"/>
-         <description value="주소-우편번호"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-organization-address-city.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-organization-address-city"/>
-            <display value="PGHDCDMOrganizationAddressCity"/>
-         </reference>
-         <name value="PGHDCDMOrganizationAddressCity"/>
-         <description value="주소-도"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-organization-address.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-organization-address"/>
-            <display value="PGHDCDMOrganizationAddress"/>
-         </reference>
-         <name value="PGHDCDMOrganizationAddress"/>
-         <description value="주소"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-organization-type.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-organization-type"/>
-            <display value="PGHDCDMOrganizationType"/>
-         </reference>
-         <name value="PGHDCDMOrganizationType"/>
-         <description value="기관 유형"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-organization-id.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-organization-id"/>
-            <display value="PGHDCDMOrganizationId"/>
-         </reference>
-         <name value="PGHDCDMOrganizationId"/>
-         <description value="의료기관/진료과 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaire-code.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaire-code"/>
-            <display value="PGHDCDMQuestionnaireCode"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireCode"/>
-         <description value="설문 이름"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaire-id.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaire-id"/>
-            <display value="PGHDCDMQuestionnaireId"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireId"/>
-         <description value="설문지 응답 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaire-status.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaire-status"/>
-            <display value="PGHDCDMQuestionnaireStatus"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireStatus"/>
-         <description value="설문 상태"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaire-title.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaire-title"/>
-            <display value="PGHDCDMQuestionnaireTitle"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireTitle"/>
-         <description value="설문 이름"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-subject.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-subject"/>
-            <display value="PGHDCDMQuestionnaireResponseSubject"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseSubject"/>
-         <description value="설문 대상"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-encounter.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-encounter"/>
-            <display value="PGHDCDMQuestionnaireResponseEncounter"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseEncounter"/>
-         <description value="설문응답 생성 수진"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-authored.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-authored"/>
-            <display value="PGHDCDMQuestionnaireResponseAuthored"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseAuthored"/>
-         <description value="설문응답 생성 일자"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-id.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-questionnaire-id"/>
-            <display value="PGHDCDMQuestionnaireResponseQuestionnaireId"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseQuestionnaireId"/>
-         <description value="설문 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-id.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-id"/>
-            <display value="PGHDCDMQuestionnaireResponseId"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseId"/>
-         <description value="설문지 응답 ID"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-status.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-questionnaire-status"/>
-            <display value="PGHDCDMQuestionnaireResponseQuestionnaireStatus"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseQuestionnaireStatus"/>
-         <description value="설문 상태"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-patient.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-patient"/>
-            <display value="PGHDCDMQuestionnaireResponsePatient"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponsePatient"/>
-         <description value="설문 상태"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-title.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-questionnaire-title"/>
-            <display value="PGHDCDMQuestionnaireResponseQuestionnaireTitle"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseQuestionnaireTitle"/>
-         <description value="설문 상태"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="SearchParameter"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-code.html"/>
-         </extension>
-         <reference>
-            <reference value="SearchParameter/pghd-cdm-questionnaireresponse-questionnaire-code"/>
-            <display value="PGHDCDMQuestionnaireResponseQuestionnaireCode"/>
-         </reference>
-         <name value="PGHDCDMQuestionnaireResponseQuestionnaireCode"/>
-         <description value="설문 코드"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-dyn-searchparameter"/>
+         <groupingId value="-str-profile"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-questionnaireitemsourcedatatype.html"/>
+            <valueUri value="StructureDefinition-mi-base-reply-comment.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-questionnaireitemsourcedatatype"/>
-            <display value="PGHD CDM QuestionnaireItemSourceDataType Extension"/>
+            <reference value="StructureDefinition/mi-base-reply-comment"/>
          </reference>
-         <name value="PGHD CDM QuestionnaireItemSourceDataType Extension"/>
+         <name value="MIBaseReplyCommentExtension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-mi-base-reply-date.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/mi-base-reply-date"/>
+         </reference>
+         <name value="MIBaseReplyDateExtension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-mi-base-reply-department.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/mi-base-reply-department"/>
+         </reference>
+         <name value="MIBaseReplyDepartmentExtension"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-extension"/>
       </resource>
@@ -1748,13 +883,43 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-pghd-cdm-questionnaireresponse.html"/>
+            <valueUri value="StructureDefinition-MIBaseRespiratoryRateProfile.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/pghd-cdm-questionnaireresponse"/>
-            <display value="PGHD CDM QuestionnaireResponse Profile"/>
+            <reference value="StructureDefinition/MIBaseRespiratoryRateProfile"/>
          </reference>
-         <name value="PGHD CDM QuestionnaireResponse Profile"/>
+         <name value="MIBaseRespiratoryRateProfile"/>
+         <description value="MI Base RespiratoryRate Profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-MIBaseServiceRequestProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/MIBaseServiceRequestProfile"/>
+         </reference>
+         <name value="MIBaseServiceRequestProfile"/>
+         <description value="MI Base ServiceRequest Profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-MIBaseVitalSignsProfile.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/MIBaseVitalSignsProfile"/>
+         </reference>
+         <name value="MIBaseVitalSignsProfile"/>
+         <description value="MI Base Vital Signs Profile"/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -1763,15 +928,14 @@
             <valueString value="Organization"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-1100.html"/>
+            <valueUri value="Organization-OrganizationExample.html"/>
          </extension>
          <reference>
-            <reference value="Organization/1100"/>
-            <display value="Seoul National University Bundang Hospital (SNUBH), South Korea "/>
+            <reference value="Organization/OrganizationExample"/>
          </reference>
-         <name value="Seoul National University Bundang Hospital (SNUBH), South Korea"/>
-         <description value="Seoul National University Bundang Hospital (SNUBH), South Korea"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-organization"/>
+         <name value="OrganizationExample"/>
+         <description value="An example of a Organization"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseOrganizationProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -1779,74 +943,59 @@
             <valueString value="Patient"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Patient-3099361824.html"/>
+            <valueUri value="Patient-PatientExample.html"/>
          </extension>
          <reference>
-            <reference value="Patient/3099361824"/>
+            <reference value="Patient/PatientExample"/>
          </reference>
-         <name value="Patient Example"/>
-         <description value="Patient Example"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-patient"/>
+         <name value="PatientExample"/>
+         <description value="An example of a patient"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBasePatientProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Device"/>
+            <valueString value="Practitioner"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Device-45758275.html"/>
+            <valueUri value="Practitioner-PractitionerExample.html"/>
          </extension>
          <reference>
-            <reference value="Device/45758275"/>
+            <reference value="Practitioner/PractitionerExample"/>
          </reference>
-         <name value="Device Example (1)"/>
-         <description value="Device Example (1)"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-device"/>
+         <name value="PractitionerExample"/>
+         <description value="An example of a Practitioner"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBasePractitionerProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Device"/>
+            <valueString value="PractitionerRole"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Device-2000000011.html"/>
+            <valueUri value="PractitionerRole-PractitionerRoleExample.html"/>
          </extension>
          <reference>
-            <reference value="Device/2000000011"/>
+            <reference value="PractitionerRole/PractitionerRoleExample"/>
          </reference>
-         <name value="Device Example (2)"/>
-         <description value="Device Example (2)"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-device"/>
+         <name value="PractitionerRoleExample"/>
+         <description value="An example of a Practitioner"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBasePractitionerRoleProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Encounter"/>
+            <valueString value="Procedure"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Encounter-446044451.html"/>
+            <valueUri value="Procedure-ProcedureExample.html"/>
          </extension>
          <reference>
-            <reference value="Encounter/446044451"/>
+            <reference value="Procedure/ProcedureExample"/>
          </reference>
-         <name value="Encounter Example"/>
-         <description value="Encounter Example"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-encounter"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Observation"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-2094666860.html"/>
-         </extension>
-         <reference>
-            <reference value="Observation/2094666860"/>
-         </reference>
-         <name value="Observation Example(Length of body)"/>
-         <description value="Observation Example(Length of body)"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-observation"/>
+         <name value="ProcedureExample"/>
+         <description value="An Example of Procedure"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseProcedureProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
@@ -1854,124 +1003,91 @@
             <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Observation-2018587611-45770187-20180912.html"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/contained-resource-information">
-            <extension url="type">
-               <valueCode value="Device"/>
-            </extension>
-            <extension url="id">
-               <valueId value="45758275"/>
-            </extension>
-            <extension url="title">
-               <valueString value="Device"/>
-            </extension>
-            <extension url="description"/>
+            <valueUri value="Observation-PulseOximetryExample.html"/>
          </extension>
          <reference>
-            <reference value="Observation/2018587611-45770187-20180912"/>
+            <reference value="Observation/PulseOximetryExample"/>
          </reference>
-         <name value="ObservationComponent Example(Blood pressure)"/>
-         <description value="ObservationComponent Example(Blood pressure)"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-observationcomponent"/>
+         <name value="PulseOximetryExample"/>
+         <description value="An Example of PulseOximetry"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBasePulseOximetryProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Questionnaire"/>
+            <valueString value="Observation"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Questionnaire-2471539106.html"/>
+            <valueUri value="Observation-RespiratoryRateExample.html"/>
          </extension>
          <reference>
-            <reference value="Questionnaire/2471539106"/>
-            <display value="건강증진센터 건강기록지 신문진"/>
+            <reference value="Observation/RespiratoryRateExample"/>
          </reference>
-         <name value="Questionnaire Example"/>
-         <description value="Questionnaire Example"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-questionnaire"/>
+         <name value="RespiratoryRateExample"/>
+         <description value="An Example of RespiratoryRate"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseRespiratoryRateProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="QuestionnaireResponse"/>
+            <valueString value="ServiceRequest"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="QuestionnaireResponse-2471539106.html"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/contained-resource-information">
-            <extension url="type">
-               <valueCode value="Questionnaire"/>
-            </extension>
-            <extension url="id">
-               <valueId value="2471539106"/>
-            </extension>
-            <extension url="title">
-               <valueString value="Questionnaire"/>
-            </extension>
-            <extension url="description"/>
+            <valueUri value="ServiceRequest-ServiceRequestExample.html"/>
          </extension>
          <reference>
-            <reference value="QuestionnaireResponse/2471539106"/>
+            <reference value="ServiceRequest/ServiceRequestExample"/>
          </reference>
-         <name value="QuestionnaireResponse Example"/>
-         <description value="QuestionnaireResponse Example"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-questionnaireresponse"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DeviceUseStatement"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DeviceUseStatement-2342552568.html"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/contained-resource-information">
-            <extension url="type">
-               <valueCode value="Device"/>
-            </extension>
-            <extension url="id">
-               <valueId value="2000000011"/>
-            </extension>
-            <extension url="title">
-               <valueString value="Device"/>
-            </extension>
-            <extension url="description"/>
-         </extension>
-         <reference>
-            <reference value="DeviceUseStatement/2342552568"/>
-         </reference>
-         <name value="DeviceUseStatement Example"/>
-         <exampleCanonical value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/StructureDefinition/pghd-cdm-deviceusestatement"/>
+         <name value="ServiceRequestExample"/>
+         <description value="An Example of ServiceRequest"/>
+         <exampleCanonical value="http://iop.ezcaretech.com/fhir/mi/base/StructureDefinition/MIBaseServiceRequestProfile"/>
          <groupingId value="-ex-example"/>
       </resource>
       <page>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="toc.html"/>
+         </extension>
          <nameUrl value="toc.html"/>
          <title value="Table of Contents"/>
          <generation value="html"/>
          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="index.html"/>
+            </extension>
             <nameUrl value="index.html"/>
             <title value="Home"/>
             <generation value="markdown"/>
          </page>
          <page>
-            <nameUrl value="profiles_and_extensions.html"/>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="downloads.html"/>
+            </extension>
+            <nameUrl value="downloads.html"/>
+            <title value="Downloads"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="examples.html"/>
+            </extension>
+            <nameUrl value="examples.html"/>
+            <title value="Examples"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="profiles-and-extensions.html"/>
+            </extension>
+            <nameUrl value="profiles-and-extensions.html"/>
             <title value="Profiles and Extensions"/>
             <generation value="markdown"/>
          </page>
          <page>
-            <nameUrl value="search_parameters_and_operations.html"/>
-            <title value="Search Parameters and Operations"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="terminology.html"/>
+            </extension>
             <nameUrl value="terminology.html"/>
             <title value="Terminology"/>
-            <generation value="markdown"/>
-         </page>
-         <page>
-            <nameUrl value="downloads.html"/>
-            <title value="Downloads"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -1979,605 +1095,267 @@
             <title value="Artifacts Summary"/>
             <generation value="html"/>
             <page>
-               <nameUrl value="OperationDefinition-observation-snapshot.html"/>
-               <title value="observation-snapshot"/>
+               <nameUrl value="StructureDefinition-MIBaseBloodPressureProfile.html"/>
+               <title value="MIBaseBloodPressureProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="OperationDefinition-readsnapshot.html"/>
-               <title value="readsnapshot"/>
+               <nameUrl value="StructureDefinition-MIBaseBMIProfile.html"/>
+               <title value="MIBaseBMIProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="OperationDefinition-questionnaireresponse-snapshot.html"/>
-               <title value="questionnaireresponse-snapshot"/>
+               <nameUrl value="StructureDefinition-MIBaseBodyHeightProfile.html"/>
+               <title value="MIBaseBodyHeightProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-id.html"/>
-               <title value="PGHDCDMPatientId"/>
+               <nameUrl value="StructureDefinition-MIBaseBodyTemperatureProfile.html"/>
+               <title value="MIBaseBodyTemperatureProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-address-city.html"/>
-               <title value="PGHDCDMPatientAddressCity"/>
+               <nameUrl value="StructureDefinition-MIBaseBodyWeightProfile.html"/>
+               <title value="MIBaseBodyWeightProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-gender.html"/>
-               <title value="PGHDCDMPatientGender"/>
+               <nameUrl value="StructureDefinition-MIBaseConditionProfile.html"/>
+               <title value="MIBaseConditionProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-address.html"/>
-               <title value="PGHDCDMPatientAddress"/>
+               <nameUrl value="StructureDefinition-MIBaseEncounterProfile.html"/>
+               <title value="MIBaseEncounterProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-organization.html"/>
-               <title value="PGHDCDMPatientOrganization"/>
+               <nameUrl value="StructureDefinition-MIBaseGlasgowComaScaleProfile.html"/>
+               <title value="MIBaseGlasgowComaScaleProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-identifier.html"/>
-               <title value="PGHDCDMPatientIdentifier"/>
+               <nameUrl value="StructureDefinition-MIBaseHeartRateProfile.html"/>
+               <title value="MIBaseHeartRateProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-birthdate.html"/>
-               <title value="PGHDCDMPatientBirthDate"/>
+               <nameUrl value="StructureDefinition-MIBaseImmunizationProfile.html"/>
+               <title value="MIBaseImmunizationProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-death-date.html"/>
-               <title value="PGHDCDMPatientDeathDate"/>
+               <nameUrl value="StructureDefinition-MIBaseLaboratoryResultObservationProfile.html"/>
+               <title value="MIBaseLaboratoryResultObservationProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-address-state.html"/>
-               <title value="PGHDCDMPatientAddressState"/>
+               <nameUrl value="StructureDefinition-MIBaseMedicationProfile.html"/>
+               <title value="MIBaseMedicationProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-patient-address-postalcode.html"/>
-               <title value="PGHDCDMPatientAddressPostalCode"/>
+               <nameUrl value="StructureDefinition-MIBaseMedicationRequestProfile.html"/>
+               <title value="MIBaseMedicationRequestProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-deviceusestatement-id.html"/>
-               <title value="PGHDCDMDeviceUseStatementId"/>
+               <nameUrl value="StructureDefinition-MIBaseOrganizationProfile.html"/>
+               <title value="MIBaseOrganizationProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-deviceusestatement-devicetype.html"/>
-               <title value="PGHDCDMDeviceUseStatementDeviceType"/>
+               <nameUrl value="StructureDefinition-MIBasePatientProfile.html"/>
+               <title value="MIBasePatientProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-deviceusestatement-subject.html"/>
-               <title value="PGHDCDMDeviceUseStatementSubject"/>
+               <nameUrl value="StructureDefinition-MIBasePractitionerProfile.html"/>
+               <title value="MIBasePractitionerProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-deviceusestatement-patient.html"/>
-               <title value="PGHDCDMDeviceUseStatementPatient"/>
+               <nameUrl value="StructureDefinition-MIBasePractitionerRoleProfile.html"/>
+               <title value="MIBasePractitionerRoleProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-encounter-status.html"/>
-               <title value="PGHDCDMEncounterStatus"/>
+               <nameUrl value="StructureDefinition-MIBaseProcedureProfile.html"/>
+               <title value="MIBaseProcedureProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-encounter-patient.html"/>
-               <title value="PGHDCDMEncounterPatient"/>
+               <nameUrl value="StructureDefinition-MIBasePulseOximetryProfile.html"/>
+               <title value="MIBasePulseOximetryProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-encounter-id.html"/>
-               <title value="PGHDCDMEncounterId"/>
+               <nameUrl value="StructureDefinition-MIBaseRespiratoryRateProfile.html"/>
+               <title value="MIBaseRespiratoryRateProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-encounter-subject.html"/>
-               <title value="PGHDCDMEncounterSubject"/>
+               <nameUrl value="StructureDefinition-MIBaseServiceRequestProfile.html"/>
+               <title value="MIBaseServiceRequestProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-encounter-class.html"/>
-               <title value="PGHDCDMEncounterClass"/>
+               <nameUrl value="StructureDefinition-MIBaseVitalSignsProfile.html"/>
+               <title value="MIBaseVitalSignsProfile"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-encounter-serviceprovider.html"/>
-               <title value="PGHDCDMEncounterServiceProvider"/>
+               <nameUrl value="StructureDefinition-mi-base-reply-comment.html"/>
+               <title value="MIBaseReplyCommentExtension"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-encounter-date.html"/>
-               <title value="PGHDCDMEncounterDate"/>
+               <nameUrl value="StructureDefinition-mi-base-reply-date.html"/>
+               <title value="MIBaseReplyDateExtension"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-id.html"/>
-               <title value="PGHDCDMObservationId"/>
+               <nameUrl value="StructureDefinition-mi-base-reply-department.html"/>
+               <title value="MIBaseReplyDepartmentExtension"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-date.html"/>
-               <title value="PGHDCDMObservationDate"/>
+               <nameUrl value="ValueSet-krcore-organization-type.html"/>
+               <title value="KR Core Organization Type"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-device-type.html"/>
-               <title value="PGHDCDMObservationDeviceType"/>
+               <nameUrl value="ValueSet-krcore-practitioner-license-code.html"/>
+               <title value="KR Core Practitioner License Code"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-patient-gender.html"/>
-               <title value="PGHDCDMObservationPatientGender"/>
+               <nameUrl value="ValueSet-krcore-practitioner-specialty.html"/>
+               <title value="KR Core Practitioner Specialty"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-contained.html"/>
-               <title value="PGHDCDMObservationContained"/>
+               <nameUrl value="ValueSet-MIBaseGCSEyeOpeningAnswer.html"/>
+               <title value="MI Base GCS EyeOpening Answer"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-code.html"/>
-               <title value="PGHDCDMObservationCode"/>
+               <nameUrl value="ValueSet-MIBaseGCSMotorAnswer.html"/>
+               <title value="MI Base GCS Motor Answer"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-device-use-end-timing.html"/>
-               <title value="PGHDCDMObservationDeviceUseEndTiming"/>
+               <nameUrl value="ValueSet-MIBaseGCSVerbalAnswer.html"/>
+               <title value="MI Base GCS Verbal Answer"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-device-use-start-timing.html"/>
-               <title value="PGHDCDMObservationDeviceUseStartTiming"/>
+               <nameUrl value="Observation-BloodPressureExample.html"/>
+               <title value="BloodPressureExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-patient.html"/>
-               <title value="PGHDCDMObservationPatient"/>
+               <nameUrl value="Observation-BMIExample.html"/>
+               <title value="BMIExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-subject.html"/>
-               <title value="PGHDCDMObservationSubject"/>
+               <nameUrl value="Observation-BodyHeightExample.html"/>
+               <title value="BodyHeightExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-category.html"/>
-               <title value="PGHDCDMObservationCategory"/>
+               <nameUrl value="Observation-BodyTemperatureExample.html"/>
+               <title value="BodyTemperatureExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-subject-gender.html"/>
-               <title value="PGHDCDMObservationSubjectGender"/>
+               <nameUrl value="Observation-BodyWeightExample.html"/>
+               <title value="BodyWeightExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-status.html"/>
-               <title value="PGHDCDMObservationStatus"/>
+               <nameUrl value="Condition-ConditionExample.html"/>
+               <title value="ConditionExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-date.html"/>
-               <title value="PGHDCDMObservationComponentDate"/>
+               <nameUrl value="Encounter-EncounterExample.html"/>
+               <title value="EncounterExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-component-code.html"/>
-               <title value="PGHDCDMObservationComponentComponentCode"/>
+               <nameUrl value="Observation-GlasgowComaScaleExample.html"/>
+               <title value="GlasgowComaScaleExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-category.html"/>
-               <title value="PGHDCDMObservationComponentCategory"/>
+               <nameUrl value="Observation-HeartRateExample.html"/>
+               <title value="HeartRateExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-code.html"/>
-               <title value="PGHDCDMObservationComponentCode"/>
+               <nameUrl value="Immunization-ImmunizationExample.html"/>
+               <title value="ImmunizationExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-contained.html"/>
-               <title value="PGHDCDMObservationComponentContained"/>
+               <nameUrl value="Observation-LaboratoryResultObservationExample.html"/>
+               <title value="LaboratoryResultObservationExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-device-type.html"/>
-               <title value="PGHDCDMObservationComponentDeviceType"/>
+               <nameUrl value="Medication-MedicationExample.html"/>
+               <title value="MedicationExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-subject-gender.html"/>
-               <title value="PGHDCDMObservationComponentSubjectGender"/>
+               <nameUrl value="MedicationRequest-MedicationRequestExample.html"/>
+               <title value="MedicationRequestExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-patient.html"/>
-               <title value="PGHDCDMObservationComponentPatient"/>
+               <nameUrl value="Organization-OrganizationExample.html"/>
+               <title value="OrganizationExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-id.html"/>
-               <title value="PGHDCDMObservationComponentId"/>
+               <nameUrl value="Patient-PatientExample.html"/>
+               <title value="PatientExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-patient-gender.html"/>
-               <title value="PGHDCDMObservationComponentPatientGender"/>
+               <nameUrl value="Practitioner-PractitionerExample.html"/>
+               <title value="PractitionerExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-device-use-end-timing.html"/>
-               <title value="PGHDCDMObservationComponentDeviceUseEndTiming"/>
+               <nameUrl value="PractitionerRole-PractitionerRoleExample.html"/>
+               <title value="PractitionerRoleExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-subject.html"/>
-               <title value="PGHDCDMObservationComponentSubject"/>
+               <nameUrl value="Procedure-ProcedureExample.html"/>
+               <title value="ProcedureExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-status.html"/>
-               <title value="PGHDCDMObservationComponentStatus"/>
+               <nameUrl value="Observation-PulseOximetryExample.html"/>
+               <title value="PulseOximetryExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-profile.html"/>
-               <title value="PGHDCDMObservationComponentProfile"/>
+               <nameUrl value="Observation-RespiratoryRateExample.html"/>
+               <title value="RespiratoryRateExample"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="SearchParameter-pghd-cdm-observation-component-device-use-start-timing.html"/>
-               <title value="PGHDCDMObservationComponentDeviceUseStartTiming"/>
+               <nameUrl value="ServiceRequest-ServiceRequestExample.html"/>
+               <title value="ServiceRequestExample"/>
                <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-organization-address-state.html"/>
-               <title value="PGHDCDMOrganizationAddressState"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-organization-name.html"/>
-               <title value="PGHDCDMOrganizationName"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-organization-address-postalcode.html"/>
-               <title value="PGHDCDMOrganizationAddressPostalCode"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-organization-address-city.html"/>
-               <title value="PGHDCDMOrganizationAddressCity"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-organization-address.html"/>
-               <title value="PGHDCDMOrganizationAddress"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-organization-type.html"/>
-               <title value="PGHDCDMOrganizationType"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-organization-id.html"/>
-               <title value="PGHDCDMOrganizationId"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaire-code.html"/>
-               <title value="PGHDCDMQuestionnaireCode"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaire-id.html"/>
-               <title value="PGHDCDMQuestionnaireId"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaire-status.html"/>
-               <title value="PGHDCDMQuestionnaireStatus"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaire-title.html"/>
-               <title value="PGHDCDMQuestionnaireTitle"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-subject.html"/>
-               <title value="PGHDCDMQuestionnaireResponseSubject"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-encounter.html"/>
-               <title value="PGHDCDMQuestionnaireResponseEncounter"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-authored.html"/>
-               <title value="PGHDCDMQuestionnaireResponseAuthored"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-id.html"/>
-               <title value="PGHDCDMQuestionnaireResponseQuestionnaireId"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-id.html"/>
-               <title value="PGHDCDMQuestionnaireResponseId"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-status.html"/>
-               <title value="PGHDCDMQuestionnaireResponseQuestionnaireStatus"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-patient.html"/>
-               <title value="PGHDCDMQuestionnaireResponsePatient"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-title.html"/>
-               <title value="PGHDCDMQuestionnaireResponseQuestionnaireTitle"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="SearchParameter-pghd-cdm-questionnaireresponse-questionnaire-code.html"/>
-               <title value="PGHDCDMQuestionnaireResponseQuestionnaireCode"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-patient.html"/>
-               <title value="PGHD CDM Patient Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-organization.html"/>
-               <title value="PGHD CDM Organization Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-device.html"/>
-               <title value="PGHD CDM Device Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-questionnaire.html"/>
-               <title value="PGHD CDM Questionnaire Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-observation.html"/>
-               <title value="PGHD CDM Observation Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-encounter.html"/>
-               <title value="PGHD CDM Encounter Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-deviceusestatement.html"/>
-               <title value="PGHD CDM DeviceUseStatement Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-observationcomponent.html"/>
-               <title value="PGHD CDM ObservationComponent Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-questionnaireresponse.html"/>
-               <title value="PGHD CDM QuestionnaireResponse Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-visittype.html"/>
-               <title value="PGHD CDM VisitType Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-devicetype.html"/>
-               <title value="PGHD CDM DeviceType Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-deviceusestarttiming.html"/>
-               <title value="PGHD CDM DeviceUseStartTiming Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-deviceuseendtiming.html"/>
-               <title value="PGHD CDM DeviceUseEndTiming Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-respondenttype.html"/>
-               <title value="PGHD CDM RespondentType Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-collectionmethod.html"/>
-               <title value="PGHD CDM CollectionMethod Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-timingsource.html"/>
-               <title value="PGHD CDM TimingSource Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-collectionmethodsource.html"/>
-               <title value="PGHD CDM CollectionMethodSource Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-pghd-cdm-questionnaireitemsourcedatatype.html"/>
-               <title value="PGHD CDM QuestionnaireItemSourceDataType Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-actencountercode.html"/>
-               <title value="PGHD CDM ActEncounterCode"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-admitsource.html"/>
-               <title value="PGHD CDM AdmitSource"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-dischargedisposition.html"/>
-               <title value="PGHD CDM DischargeDisposition"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-purposeofencounter.html"/>
-               <title value="PGHD CDM PurposeOfEncounter"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-device-type.html"/>
-               <title value="PGHD CDM DeviceType"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-observationcodes.html"/>
-               <title value="PGHD CDM ObservationCodes"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-obscompcomponentcodes.html"/>
-               <title value="PGHD CDM ObsCompComponentCodes"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-questionnairecodes.html"/>
-               <title value="PGHD CDM QuestionnaireCodes"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-pghd-cdm-questionnaireresponsecodes.html"/>
-               <title value="PGHD CDM QuestionnaireResponse Profile"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-cmsplaceofservicecodes.html"/>
-               <title value="Place of Service Codes for Professional Claims(CMS)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-umls.html"/>
-               <title value="Unified Medical Language System"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-v3-ucum.html"/>
-               <title value="Unified Code for Units of Measure (UCUM)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-athena.html"/>
-               <title value="Athena"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-snubhcdmcodesystem.html"/>
-               <title value="SNUBH CDM Code System"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-loinc.html"/>
-               <title value="Logical Observation Identifiers Names and Codes"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Organization-1100.html"/>
-               <title value="Seoul National University Bundang Hospital (SNUBH), South Korea"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Patient-3099361824.html"/>
-               <title value="Patient Example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Device-45758275.html"/>
-               <title value="Device Example (1)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Device-2000000011.html"/>
-               <title value="Device Example (2)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Encounter-446044451.html"/>
-               <title value="Encounter Example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-2094666860.html"/>
-               <title value="Observation Example(Length of body)"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="Observation-2018587611-45770187-20180912.html"/>
-               <title value="ObservationComponent Example(Blood pressure)"/>
-               <generation value="generated"/>
-               <page>
-                  <nameUrl value="Device-2018587611-45770187-20180912_45758275.html"/>
-                  <title value="Device"/>
-                  <generation value="generated"/>
-               </page>
-            </page>
-            <page>
-               <nameUrl value="Questionnaire-2471539106.html"/>
-               <title value="Questionnaire Example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="QuestionnaireResponse-2471539106.html"/>
-               <title value="QuestionnaireResponse Example"/>
-               <generation value="generated"/>
-               <page>
-                  <nameUrl value="Questionnaire-2471539106_2471539106.html"/>
-                  <title value="Questionnaire"/>
-                  <generation value="generated"/>
-               </page>
-            </page>
-            <page>
-               <nameUrl value="DeviceUseStatement-2342552568.html"/>
-               <title value="DeviceUseStatement Example"/>
-               <generation value="generated"/>
-               <page>
-                  <nameUrl value="Device-2342552568_2000000011.html"/>
-                  <title value="Device"/>
-                  <generation value="generated"/>
-               </page>
             </page>
          </page>
       </page>
-      <parameter>
-         <code value="copyrightyear"/>
-         <value value="2020+"/>
-      </parameter>
-      <parameter>
-         <code value="releaselabel"/>
-         <value value="CI Build"/>
-      </parameter>
       <parameter>
          <code value="path-resource"/>
          <value value="input/capabilities"/>
@@ -2635,6 +1413,22 @@
          <value value="input/images"/>
       </parameter>
       <parameter>
+         <code value="path-tx-cache"/>
+         <value value="input-cache/txcache"/>
+      </parameter>
+      <parameter>
+         <code value="copyrightyear"/>
+         <value value="2023+"/>
+      </parameter>
+      <parameter>
+         <code value="releaselabel"/>
+         <value value="ci-build"/>
+      </parameter>
+      <parameter>
+         <code value="autoload-resources"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
          <code value="path-liquid"/>
          <value value="template/liquid"/>
       </parameter>
@@ -2655,16 +1449,12 @@
          <value value="output"/>
       </parameter>
       <parameter>
-         <code value="path-tx-cache"/>
-         <value value="input-cache/txcache"/>
-      </parameter>
-      <parameter>
          <code value="path-suppressed-warnings"/>
          <value value="input/ignoreWarnings.txt"/>
       </parameter>
       <parameter>
          <code value="path-history"/>
-         <value value="https://build.fhir.org/ig/HIRC-SNUBH/PGHD-CDMtoFHIR/history.html"/>
+         <value value="http://iop.ezcaretech.com/fhir/mi/base/history.html"/>
       </parameter>
       <parameter>
          <code value="template-html"/>
@@ -2716,6 +1506,10 @@
       </parameter>
       <parameter>
          <code value="excludelogbinaryformat"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="tabbed-snapshots"/>
          <value value="true"/>
       </parameter>
    </definition>

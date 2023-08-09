@@ -1,9 +1,25 @@
-### Artifact Definitions
-하기의 목록에서 데이터 형식별 FHIR Profiling 결과물을 다운로드 할 수 있습니다.
+### Package File
 
-* [XML](definitions.xml.zip)
-* [JSON](definitions.json.zip)
-* [TTL](definitions.ttl.zip)
+아래는 NPM (Node Pacakge Manager) Package 방식으로 만들어진 FHIR Package 파일입니다.
+
+- [Package](package.tgz)
+
+### Artifact Definitions
+
+아래는 FHIR Profiling 결과물입니다.
+
+- [XML](definitions.xml.zip)
+- [JSON](definitions.json.zip)
+
+### Examples
+
+아래는 FHIR Resource 예제들입니다.
+
+- [XML](examples.xml.zip)
+- [JSON](examples.json.zip)
 
 ### Downloadable Copy of Entire Specification
-전체 구현 가이드(HTML 파일, 정의, 유효성 검사 정보 등 포함)는 [해당 링크](full-ig.zip)에서 다운로드 할 수 있습니다.
+
+아래는 MI Base IG 결과물 전체입니다.
+
+- [Downloadable Copy](full-ig.zip)

@@ -1,23 +1,19 @@
-### Code System
-본 구현가이드에 참조된 Code System 목록은 다음과 같습니다.
+This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the US Core Implementation Guide. For more information on using codes in US Core, see the FHIR Terminology section in the FHIR specification and the Coded Elements section in this guide.
 
-- [CMS Place of Service Codes (POS)](CodeSystem-cmsplaceofservicecodes.html)
-- [Unified Medical Language System](CodeSystem-umls.html)
-- [Unified Code for Units of Measure (UCUM)](CodeSystem-v3-ucum.html)
-- [Athena](CodeSystem-athena.html)
-- [SNUBH CDM Code System](CodeSystem-snubhcdmcodesystem.html)
-- [LOINC](CodeSystem-loinc.html)
+### Value Sets
 
-### Value Set
+These value sets have been defined for this implementation guide.
 
-본 구현가이드에서 정의된 ValueSet 목록은 다음과 같습니다.
+- [KR Core Organization Type](ValueSet-krcore-organization-type.html) (의료기관 구분 코드)
+- [KR Core Practitioner License Code](ValueSet-krcore-practitioner-license-code.html) (보건의료인 면허 코드)
+- [KR Core Practitioner Specialty Code](ValueSet-krcore-practitioner-specialty.html) (의료인 진료과 코드)
+- [MI Base Glasgow Coma Scale Motor Answer Code](ValueSet-MIBaseGCSMotorAnswer.html) (GCS Motor Answer 코드)
+- [MI Base Glasgow Coma Scale Verbal Answer Code](ValueSet-MIBaseGCSVerbalAnswer.html) (GCS Verbal Answer 코드)
+- [MI Base Glasgow Coma Scale Eye Opening Answer Code](ValueSet-MIBaseGCSEyeOpeningAnswer.html) (GCS Eye Opening Answer 코드)
 
-- [PGHD CDM ActEncounterCode](ValueSet-pghd-cdm-actencountercode.html)
-- [PGHD CDM AdmitSource](ValueSet-pghd-cdm-admitsource.html)
-- [PGHD CDM DischargeDisposition](ValueSet-pghd-cdm-dischargedisposition.html)
-- [PGHD CDM PurposeOfEncounter](ValueSet-pghd-cdm-purposeofencounter.html)
-- [PGHD CDM DeviceType](ValueSet-pghd-cdm-device-type.html)
-- [PGHD CDM ObservationCodes](ValueSet-pghd-cdm-observationcodes.html)
-- [PGHD CDM ObsCompComponentCodes](ValueSet-pghd-cdm-obscompcomponentcodes.html)
-- [PGHD CDM QuestionnaireCodes](ValueSet-pghd-cdm-questionnairecodes.html)
-- [PGHD CDM QuestionnaireResponseCodes](ValueSet-pghd-cdm-questionnaireresponsecodes.html)
+### CodeSystems
+
+See the FHIR terminology section for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the base FHIR specification. However, the following code systems are unique to this guide and not listed in the base FHIR specification. If a URI is listed here, it SHALL be used in the US Core profiles to identify the code system in preference to any other code system URI.
+
+- 건강보험심사평가원 요양기관 구분 코드 (hira organization type)
+- 보건복지부 의료인 면허 코드 (mohw practitioner license)
